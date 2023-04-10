@@ -2,25 +2,33 @@
   font-family: SpaceGrotesk-Bold;
   src: url('fonts/otf/SpaceGrotesk-Bold.otf');
 }
+
 @font-face {
   font-family: SpaceGrotesk-Medium;
   src: url('fonts/otf/SpaceGrotesk-Medium.otf');
 }
+
 @font-face {
   font-family: SpaceGrotesk-Regular;
   src: url('fonts/otf/SpaceGrotesk-Regular.otf');
 }
+
 @font-face {
   font-family: SpaceGrotesk-Light;
   src: url('fonts/otf/SpaceGrotesk-Light.otf');
 }
 
 body {
-  font-family: SpaceGrotesk-light;
+  font-family: SpaceGrotesk-Light;
   font-size: 16px;
-  font-weight: 400;
   color: #000;
   background-color: rgb(240, 240, 240);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .profile-pic {
@@ -30,26 +38,35 @@ body {
   display: block;
 }
 
-ul {
+ul, ul li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-ul li  {
-  list-style-type: none;
+ul li {
   padding-bottom: 5px;
 }
 
 .card {
-  margin: 0 auto;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   display: block;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a:visited {
+  color: blue;
 }
 
 .p {
@@ -57,14 +74,14 @@ ul li  {
   margin: 0 auto;
 }
 
-.skills ul{
+.skills ul {
   width: 20%;
   margin: 1;
   display: inline-block;
 }
 
 .socials {
- display: block;
+  display: block;
   margin: 0 auto;
   text-align: center;
 }
@@ -88,127 +105,52 @@ ul li  {
 }
 
 .projects li .square {
-  width: 200px;
+  width: 300px;
   height: 200px;
-  margin: 0 20px;
+  margin: 40px 20px;
 }
 
 .projects .square img {
   max-width: 100%;
   width: 100%;
   max-height: 100%;
+  border-radius: 5px;
 }
 
-ul li a {
-  text-decoration: none;
+button {
+  border-radius: 5px;
+    height: 30px;
+    width: 60px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-a:visited {
-  color: blue;
+.form-labels {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
 }
 
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 900px;
-  margin: 0 auto;
-  display: block;
-
-}
-
-h1 {
-  font-family: SpaceGrotesk-Bold;
-  font-size: 36px;
-  font-weight: 900;
-  text-align: center;
-}
-
-h2 {
-  font-family: SpaceGrotesk-bold;
-  font-size: 24px;
-  font-weight: 900;
-  text-align: center;
-}
-
-.custom-btn {
-  padding: 10px 25px;
-  font-family: "SpaceGrotesk-Regular", sans-serif;
-  font-weight: 500;
-  background: transparent;
-  outline: none !important;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  margin-top: 40px;
+.label-email {
+  height: 25px;
+  width: 420px;
   margin-bottom: 20px;
+  border: 1px solid blue;
+  border-radius: 5px;
 }
 
-.btn-1 {
-  border: 2px solid blue;
-  color: blue;
+.label-message {
+  height: 70px;
+  width: 420px;
+  margin-bottom: 20px;
+  border: 1px solid blue;
+  border-radius: 5px;
 }
-.btn-1:hover {
-  background: blue;
-  color: #fff;
-}
-.btn-1:active {
-  top: 2px;
-}
-
-
-
-@media (max-width: 1200px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 960px;
-  }
-}
-
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .container {
-    width: 700px;
-  }
-}
-
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 500px;
-  }
-}
-
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .container {
-    width: 300px;
-  }
-
-  .skills ul{
-    width: 150px;
-    margin: 1;
-    display: inline-block;
-  }
-}
-
-/* body {
-	background: linear-gradient(-45deg, #121212, #ffffff);
-	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
-	height: 100vh;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
