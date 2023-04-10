@@ -107,7 +107,7 @@ ul li {
 .projects li .square {
   width: 300px;
   height: 200px;
-  margin: 40px 20px;
+  margin: 0px 0px 70px 20px;
 }
 
 .projects .square img {
